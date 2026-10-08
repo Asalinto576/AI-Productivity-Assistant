@@ -57,7 +57,27 @@ function ToolForm() {
                   {f.options!.map((o) => <option key={o}>{o}</option>)}
                 </select>
               ) : f.type === "textarea" ? (
-                <textarea rows={6} className={field} placeholder={f.placeholder} value={input[f.name]} onChange={(e) => setInput({ ...input, [f.name]: e.target.value })} />
+                <>
+                  <textarea rows={6} className={field} placeholder={f.placeholder} value={input[f.name]} onChange={(e) => setInput({ ...input, [f.name]: e.target.value })} />
+                  {f.examples && (
+                    <div className="flex flex-wrap gap-1.5 pt-1">
+                      {f.examples.map((ex) => (
+                        <button
+                          key={ex}
+                          type="button"
+                          onClick={() => {
+                            const cur = (input[f.name] ?? "").trim();
+                            setInput({ ...input, [f.name]: cur ? `${cur}, ${ex}` : ex });
+                          }}
+                          className="max-w-full truncate rounded-full border bg-card/70 px-2.5 py-1 text-xs text-muted-foreground transition-colors hover:border-ring hover:text-foreground"
+                          title={ex}
+                        >
+                          {ex}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </>
               ) : (
                 <input className={field} placeholder={f.placeholder} value={input[f.name]} onChange={(e) => setInput({ ...input, [f.name]: e.target.value })} />
               )}
