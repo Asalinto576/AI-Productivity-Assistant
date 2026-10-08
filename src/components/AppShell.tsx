@@ -24,14 +24,14 @@ export function AppShell({ title, children }: { title: string; children: ReactNo
           <span className="font-display text-xl leading-tight">Asah<br /><span className="text-xs font-sans tracking-[0.3em] text-sidebar-primary">BEAUTY BAR</span></span>
         </Link>
         <nav className="flex md:flex-col gap-1 overflow-x-auto px-3 pb-3">
-          {nav.map((n) => (
+          {nav.map(({ label, icon: Icon, ...link }) => (
             <Link
-              key={n.label}
-              {...(n as { to: "/dashboard" })}
+              key={label}
+              {...(link as { to: "/dashboard" })}
               className="flex items-center gap-3 whitespace-nowrap rounded-lg px-3 py-2 text-sm hover:bg-sidebar-accent"
               activeProps={{ className: "bg-sidebar-accent text-sidebar-primary" }}
             >
-              <n.icon className="h-4 w-4" /> {n.label}
+              <Icon className="h-4 w-4" /> {label}
             </Link>
           ))}
         </nav>
