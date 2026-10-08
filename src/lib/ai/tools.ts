@@ -27,7 +27,19 @@ export const TOOLS: Record<string, ToolConfig> = {
       { name: "tone", label: "Tone", type: "select", options: ["Warm & friendly", "Professional", "Luxury & elegant", "Short & direct"] },
       { name: "customer", label: "Customer name", type: "text", placeholder: "e.g. Thandi" },
       { name: "service", label: "Service", type: "select", options: services },
-      { name: "details", label: "Details", type: "textarea", placeholder: "Date, time, staff, price, special notes…" },
+      {
+        name: "details",
+        label: "Details",
+        type: "textarea",
+        placeholder: "Date, time, staff, price, special notes…",
+        examples: [
+          "Thandi, acrylic full set, Sat 11 Oct, 09:00, Lerato, R450",
+          "Naledi, volume lashes, tomorrow 10:30, Zinhle, please come 5 min early",
+          "Busi, bridal makeup, moving Sat 18 Oct to Sun 19 Oct, same time",
+          "Amina, birthday event, prefers WhatsApp only, often runs late",
+          "Refill due, gel nails, every 3 weeks, asks for quiet appointment",
+        ],
+      },
     ],
   },
   notes: {
