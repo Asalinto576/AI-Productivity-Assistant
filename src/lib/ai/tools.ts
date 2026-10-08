@@ -47,7 +47,19 @@ export const TOOLS: Record<string, ToolConfig> = {
     title: "Notes Summarizer",
     blurb: "Turn messy appointment and customer notes into clear summaries.",
     cta: "Summarize",
-    fields: [{ name: "notes", label: "Paste notes", type: "textarea", placeholder: "Customer wants long coffin acrylic, nude ombre, allergic to…" }],
+    fields: [{
+      name: "notes",
+      label: "Paste notes",
+      type: "textarea",
+      placeholder: "Customer wants long coffin acrylic, nude ombre, allergic to…",
+      examples: [
+        "Thandi - long coffin acrylic, nude ombre, wants gems on ring finger, allergic to latex",
+        "Naledi came 15 min late, volume lashes, eyes watered - use sensitive glue next time, refill in 3 wks",
+        "Busi wedding 24 Oct, bridal makeup trial went well, wants softer lip, 3 bridesmaids also need makeup",
+        "Amara brings own frontal wig, wants bald cap method, asked about braids price for Dec",
+        "Lindiwe back pain, asked for deep tissue, prefers quiet room, interested in monthly package",
+      ],
+    }],
   },
   planner: {
     id: "planner",
