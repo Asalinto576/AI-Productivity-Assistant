@@ -1,4 +1,4 @@
 # Roadmap
 - [x] Brand: name "Asah Beauty Bar" + logo (profile & ribbon)
-- [ ] Confirm scope, logins, chat history choices with user
-- [ ] Build app from uploaded BeautyGlow AI brief
+- [x] Choices skipped: no login, demo data, single unsaved chat
+- [x] Build app (landing, dashboard, 5 AI tools, chat, appointments, customers)
