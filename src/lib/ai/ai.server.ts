@@ -16,7 +16,7 @@ const TOOL_PROMPTS: Record<string, string> = {
 };
 
 export function streamAi(request: Request, tool: string, messages: ModelMessage[]) {
-  const apiKey = process.env.LOVABLE_API_KEY;
+  const apiKey = process.env["LOVABLE_API_KEY"];
   if (!apiKey) return new Response("AI is not configured.", { status: 500 });
   const runIdFetch = createLovableAiGatewayRunIdFetch(getLovableAiGatewayRunId(request));
   const provider = createOpenAI({

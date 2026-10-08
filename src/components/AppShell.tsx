@@ -27,8 +27,7 @@ export function AppShell({ title, children }: { title: string; children: ReactNo
           {nav.map((n) => (
             <Link
               key={n.label}
-              to={n.to}
-              params={"params" in n ? n.params : undefined}
+              {...(n as { to: "/dashboard" })}
               className="flex items-center gap-3 whitespace-nowrap rounded-lg px-3 py-2 text-sm hover:bg-sidebar-accent"
               activeProps={{ className: "bg-sidebar-accent text-sidebar-primary" }}
             >

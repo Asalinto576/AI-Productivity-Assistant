@@ -7,7 +7,7 @@ export async function streamFromAi(
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(body),
-    signal,
+    signal: signal ?? null,
   });
   if (!res.ok || !res.body) {
     const msg = await res.text().catch(() => "");
