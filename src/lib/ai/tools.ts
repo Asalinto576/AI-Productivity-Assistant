@@ -5,6 +5,7 @@ export type Field = {
   type: "text" | "textarea" | "select";
   options?: string[];
   placeholder?: string;
+  examples?: string[];
 };
 
 export type ToolConfig = { id: string; title: string; blurb: string; cta: string; fields: Field[] };
