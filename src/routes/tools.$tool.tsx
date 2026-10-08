@@ -66,7 +66,7 @@ function ToolForm() {
                           key={ex}
                           type="button"
                           onClick={() => {
-                            const cur = input[f.name].trim();
+                            const cur = (input[f.name] ?? "").trim();
                             setInput({ ...input, [f.name]: cur ? `${cur}, ${ex}` : ex });
                           }}
                           className="max-w-full truncate rounded-full border bg-card/70 px-2.5 py-1 text-xs text-muted-foreground transition-colors hover:border-ring hover:text-foreground"
